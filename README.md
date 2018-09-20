@@ -301,3 +301,16 @@ $ docker stack services elk
 
 **NOTE:** to scale Elasticsearch in Swarm mode, configure *zen* to use the DNS name `tasks.elasticsearch` instead of
 `elasticsearch`.
+
+
+### Docker Cluster
+
+If you want to create a cluster with multiple nodes use the following command
+
+```console
+$ docker-compose up -d
+$ docker-compose up -d --scale elasticsearch=3
+```
+If you have made custom changes to Dockerfiles use the initial docker-compose with the --force-recreate --build flags
+
+
